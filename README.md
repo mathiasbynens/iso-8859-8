@@ -1,6 +1,6 @@
 # iso-8859-8 [![Build status](https://travis-ci.org/mathiasbynens/iso-8859-8.svg?branch=master)](https://travis-ci.org/mathiasbynens/iso-8859-8) [![Dependency status](https://gemnasium.com/mathiasbynens/iso-8859-8.svg)](https://gemnasium.com/mathiasbynens/iso-8859-8)
 
-_iso-8859-8_ is robust JavaScript implementation of [the iso-8859-8 character encoding as defined by the Encoding Standard](http://encoding.spec.whatwg.org/#iso-8859-8).
+_iso-8859-8_ is a robust JavaScript implementation of [the iso-8859-8 character encoding as defined by the Encoding Standard](http://encoding.spec.whatwg.org/#iso-8859-8).
 
 This encoding is known under the following names: csiso88598e, csisolatinhebrew, hebrew, iso-8859-8, iso-8859-8-e, iso-ir-138, iso8859-8, iso88598, iso_8859-8, iso_8859-8:1988, visual, and visual.
 
