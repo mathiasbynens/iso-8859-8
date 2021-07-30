@@ -3,7 +3,7 @@
 	"version": "1.1.0",
 	"description": "A robust iso-8859-8 encoder/decoder written in JavaScript.",
 	"homepage": "https://mths.be/iso-8859-8",
-	"main": "iso-8859-8.js",
+	"exports": "iso-8859-8.mjs",
 	"keywords": [
 		"codec",
 		"decoder",
@@ -36,13 +36,13 @@
 	"bugs": "https://github.com/mathiasbynens/iso-8859-8/issues",
 	"files": [
 		"LICENSE-MIT.txt",
-		"iso-8859-8.js"
+		"iso-8859-8.mjs"
 	],
 	"scripts": {
 		"download": "curl https://encoding.spec.whatwg.org/index-iso-8859-8.txt > data/index.txt",
 		"build": "node scripts/transform-data.js",
-		"test": "node tests/tests.js",
-		"cover": "istanbul cover --report html --verbose --dir coverage tests/tests.js"
+		"test": "node tests/tests.mjs",
+		"cover": "istanbul cover --report html --verbose --dir coverage tests/tests.mjs"
 	},
 	"devDependencies": {
 		"istanbul": "^0.4.2",
