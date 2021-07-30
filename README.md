@@ -1,4 +1,4 @@
-# iso-8859-8 [![Build status](https://travis-ci.org/mathiasbynens/iso-8859-8.svg?branch=master)](https://travis-ci.org/mathiasbynens/iso-8859-8) [![Code coverage status](https://coveralls.io/repos/mathiasbynens/iso-8859-8/badge.svg)](https://coveralls.io/r/mathiasbynens/iso-8859-8) [![Dependency status](https://gemnasium.com/mathiasbynens/iso-8859-8.svg)](https://gemnasium.com/mathiasbynens/iso-8859-8)
+# iso-8859-8 [![iso-8859-8 on npm](https://img.shields.io/npm/v/iso-8859-8)](https://www.npmjs.com/package/iso-8859-8)
 
 _iso-8859-8_ is a robust JavaScript implementation of [the iso-8859-8 character encoding as defined by the Encoding Standard](https://encoding.spec.whatwg.org/#iso-8859-8).
 
@@ -18,32 +18,10 @@ In a browser:
 <script src="iso-8859-8.js"></script>
 ```
 
-In [Node.js](https://nodejs.org/), [io.js](https://iojs.org/), [Narwhal](http://narwhaljs.org/), and [RingoJS](http://ringojs.org/):
+In [Node.js](https://nodejs.org/):
 
 ```js
-var iso88598 = require('iso-8859-8');
-```
-
-In [Rhino](https://www.mozilla.org/rhino/):
-
-```js
-load('iso88598.js');
-```
-
-Using an AMD loader like [RequireJS](http://requirejs.org/):
-
-```js
-require(
-  {
-    'paths': {
-      'iso-8859-8': 'path/to/iso-8859-8'
-    }
-  },
-  ['iso-8859-8'],
-  function(iso88598) {
-    console.log(iso88598);
-  }
-);
+const iso88598 = require('iso-8859-8');
 ```
 
 ## API
@@ -68,7 +46,7 @@ The optional `options` object and its `mode` property can be used to set the [er
 
 ```js
 const encodedData = iso88598.encode(text, {
-  'mode': 'html'
+  mode: 'html'
 });
 // If `text` contains a symbol that cannot be represented in iso-8859-8,
 // instead of throwing an error, it will return an HTML entity for the symbol.
@@ -86,17 +64,13 @@ The optional `options` object and its `mode` property can be used to set the [er
 
 ```js
 const text = iso88598.decode(encodedData, {
-  'mode': 'fatal'
+  mode: 'fatal'
 });
 // If `encodedData` contains an invalid byte for the iso-8859-8 encoding,
 // instead of replacing it with U+FFFD in the output, an error is thrown.
 ```
 
 For decoding a buffer (e.g. from `fs.readFile`) use `buffer.toString('binary')` to get the byte string which `decode` takes.
-
-## Support
-
-_iso-8859-8_ is designed to work in at least Node.js v0.10.0, io.js v1.0.0, Narwhal 0.3.2, RingoJS 0.8-0.11, PhantomJS 1.9.0, Rhino 1.7RC4, as well as old and modern versions of Chrome, Firefox, Safari, Opera, Edge, and Internet Explorer.
 
 ## Notes
 
