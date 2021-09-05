@@ -50,6 +50,11 @@ assert.throws(
 	Error,
 	'Mode names are case-insensitive'
 );
+assert.deepStrictEqual(
+	iso88598.encode('\uFFFF', { mode: 'replacement' }),
+	new Uint16Array([0xFFFD]),
+	'Encoding a code point that is invalid for this encoding results in U+FFFD in `replacement` mode'
+);
 
 console.log('Testing `iso88598.decode`…');
 assert.deepStrictEqual(
